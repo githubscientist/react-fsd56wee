@@ -6,7 +6,10 @@ const todoServices = {
     },
     postTodo: async (data) => {
         return await instance.post('/todos', data);
-    }
+    },
+    putTodo: async (data, id) => {
+        return await instance.put(`/todos/${id}`, data);
+    },
 }
 
 export default todoServices;
