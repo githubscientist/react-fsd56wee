@@ -37,6 +37,7 @@ const AddTodo = () => {
           });
       } else {
         // make a PUT request to the server
+        console.log(status);
         todoServices.putTodo({
           description: newTodo,
           status: status
@@ -66,8 +67,8 @@ const AddTodo = () => {
           onChange={(e) => dispatch(setNewTodo(e.target.value))}
         />
         <select
-          value={status}
-          onChange={(e) => dispatch(setStatus(e.target.value))}
+          value={status ? 'True' : 'False'}
+          onChange={(e) => dispatch(setStatus(e.target.value === 'True' ? true : false))}
         >
           <option>False</option>
           <option>True</option>
