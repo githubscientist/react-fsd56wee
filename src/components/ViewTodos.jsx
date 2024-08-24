@@ -41,7 +41,7 @@ const ViewTodos = () => {
 
   return (
     <div>
-        <h1>Todos</h1>
+        <h1 className="mt-3">Todos</h1>
         <button onClick={handleAddTodoClick}>
             Add a new todo
         </button>
