@@ -42,7 +42,9 @@ const ViewTodos = () => {
         <h1>Todos</h1>
         <ul className="todoList">
         {
-            todos.map(todo => (
+            todos
+            .sort((a, b) => a.status - b.status)          
+            .map(todo => (
                 <li key={todo._id}>
                     <input type="checkbox" checked={todo.status} 
                         onChange={() => handleCheck(todo)}
