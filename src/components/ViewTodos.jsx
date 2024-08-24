@@ -11,10 +11,12 @@ const ViewTodos = () => {
     const navigate = useNavigate();
 
     const handleTodoClick = (todo) => {
-        dispatch(setNewTodo(todo.description));
-        dispatch(setStatus(todo.status));
-        dispatch(setIsEditing(true));
-        dispatch(setIsEditingId(todo._id));
+        // dispatch(setNewTodo(todo.description));
+        // dispatch(setStatus(todo.status));
+        // dispatch(setIsEditing(true));
+        // dispatch(setIsEditingId(todo._id));
+
+        navigate(`/todos/${todo._id}`);
     }
 
     const handleCheck = (todo) => {
