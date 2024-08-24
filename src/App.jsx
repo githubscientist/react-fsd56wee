@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import todosLoader from "./loaders/todosLoader";
 import Todo from "./components/Todo";
 import todoLoader from "./loaders/todoLoader";
+import AddTodo from "./components/AddTodo";
 
 // create a router object
 const router = createBrowserRouter([
@@ -15,6 +16,14 @@ const router = createBrowserRouter([
     path: "/todos/:id",
     element: <Todo />,
     loader: todoLoader
+  },
+  {
+    path: "/add-todo",
+    element: <AddTodo />
+  },
+  {
+    path: "/edit-todo/:id",
+    element: <AddTodo />
   }
 ]);
 

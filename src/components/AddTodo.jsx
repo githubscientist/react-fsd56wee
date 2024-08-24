@@ -59,12 +59,17 @@ const AddTodo = () => {
 
   return (
     <form onSubmit={handleAddTodo}>
+      <div>
         <input 
           type="text"
           placeholder="Add Todo..."
           value={newTodo}
           onChange={(e) => dispatch(setNewTodo(e.target.value))}
+          style={{ width: '500px' }}
         />
+      </div>
+      <br />
+      <div>
         <select
           value={status ? 'True' : 'False'}
           onChange={(e) => dispatch(setStatus(e.target.value === 'True' ? true : false))}
@@ -72,7 +77,11 @@ const AddTodo = () => {
           <option>False</option>
           <option>True</option>
         </select>
-      <button type="submit">{ isEditing ? 'Update Todo': 'Add Todo' }</button>
+      </div>
+      <br />
+      <div>
+        <button type="submit">{ isEditing ? 'Update Todo': 'Add Todo' }</button>
+      </div>
       </form>
   )
 }
