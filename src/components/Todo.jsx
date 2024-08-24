@@ -21,7 +21,7 @@ const Todo = () => {
           alert('Todo deleted successfully!');
 
           // redirect the user to the home page after deleting the todo
-          navigate('/');
+          navigate('/dashboard');
         })
         .catch((error) => {
           console.error('Error deleting todo: ', error);
@@ -35,7 +35,7 @@ const Todo = () => {
     dispatch(setIsEditing(true));
     dispatch(setIsEditingId(todo._id));
 
-    navigate(`/edit-todo/${todo._id}`);
+    navigate(`/dashboard/edit-todo/${todo._id}`);
   }
 
   return (

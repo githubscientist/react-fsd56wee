@@ -30,7 +30,7 @@ const AddTodo = () => {
             dispatch(clearForm());
 
             // reload the todos
-            navigate('/');
+            navigate('/dashboard');
           })
           .catch(error => {
             alert('Failed to add todo');
@@ -48,7 +48,7 @@ const AddTodo = () => {
             dispatch(clearForm());
 
             // reload the todos
-            navigate('/');
+            navigate('/dashboard');
           })
           .catch(error => {
             alert('Failed to update todo');
