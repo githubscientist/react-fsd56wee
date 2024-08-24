@@ -37,7 +37,6 @@ const AddTodo = () => {
           });
       } else {
         // make a PUT request to the server
-        console.log(status);
         todoServices.putTodo({
           description: newTodo,
           status: status
